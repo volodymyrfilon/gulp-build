@@ -91,6 +91,14 @@ gulp.task('images:docs', function () {
 		.pipe(gulp.dest('./docs/img/'));
 });
 
+gulp.task('icons:docs', function () {
+	return gulp
+		.src('./src/icons/**/*')
+		.pipe(gulp.src('./src/icons/**/*'))
+		.pipe(changed('./docs/icons/'))
+		.pipe(gulp.dest('./docs/icons/'));
+});
+
 gulp.task('fonts:docs', function () {
 	return gulp
 		.src('./src/fonts/**/*')
